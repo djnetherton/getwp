@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#get WordPress
+echo "Downloading WordPress"
+curl -O https://wordpress.org/latest.zip
+
+#Unzip it
+echo "Unzipping..."
+unzip latest.zip
+
+#Name it
+echo "Enter your site name (e.g. myawesomesite.com):"
+read sitename
+
+#And move it
+mv wordpress $sitename
+
+#Clean this shiz up
+echo "Cleaning..."
+rm latest.zip
